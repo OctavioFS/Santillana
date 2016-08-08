@@ -13,6 +13,8 @@
 		68D46DA61D59150900E54B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D46DA51D59150900E54B46 /* Assets.xcassets */; };
 		68D46DA91D59150900E54B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D46DA71D59150900E54B46 /* LaunchScreen.storyboard */; };
 		68D46DB41D59150900E54B46 /* RichmondCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D46DB31D59150900E54B46 /* RichmondCatalogTests.swift */; };
+		68D46DBF1D5916F500E54B46 /* CategoriasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D46DBE1D5916F500E54B46 /* CategoriasTableViewController.swift */; };
+		68D46DC11D59171F00E54B46 /* CategoriasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D46DC01D59171F00E54B46 /* CategoriasTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		68D46DAF1D59150900E54B46 /* RichmondCatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichmondCatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D46DB31D59150900E54B46 /* RichmondCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichmondCatalogTests.swift; sourceTree = "<group>"; };
 		68D46DB51D59150900E54B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68D46DBE1D5916F500E54B46 /* CategoriasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriasTableViewController.swift; sourceTree = "<group>"; };
+		68D46DC01D59171F00E54B46 /* CategoriasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriasTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 				68D46D9E1D59150900E54B46 /* AppDelegate.swift */,
 				68D46DA01D59150900E54B46 /* ViewController.swift */,
 				68D46DA21D59150900E54B46 /* Main.storyboard */,
+				68D46DC21D59173200E54B46 /* Categoria */,
 				68D46DA51D59150900E54B46 /* Assets.xcassets */,
 				68D46DA71D59150900E54B46 /* LaunchScreen.storyboard */,
 				68D46DAA1D59150900E54B46 /* Info.plist */,
@@ -94,6 +99,15 @@
 				68D46DB51D59150900E54B46 /* Info.plist */,
 			);
 			path = RichmondCatalogTests;
+			sourceTree = "<group>";
+		};
+		68D46DC21D59173200E54B46 /* Categoria */ = {
+			isa = PBXGroup;
+			children = (
+				68D46DBE1D5916F500E54B46 /* CategoriasTableViewController.swift */,
+				68D46DC01D59171F00E54B46 /* CategoriasTableViewCell.swift */,
+			);
+			name = Categoria;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				68D46DA11D59150900E54B46 /* ViewController.swift in Sources */,
+				68D46DC11D59171F00E54B46 /* CategoriasTableViewCell.swift in Sources */,
+				68D46DBF1D5916F500E54B46 /* CategoriasTableViewController.swift in Sources */,
 				68D46D9F1D59150900E54B46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
