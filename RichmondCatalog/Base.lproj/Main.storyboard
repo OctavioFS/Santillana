@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Categories-->
         <scene sceneID="QhE-h5-lrl">
             <objects>
-                <tableViewController id="mAq-c3-Etp" customClass="CategoriasTableViewController" customModule="RichmondCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="categoriesTabeView" id="mAq-c3-Etp" customClass="CategoriasTableViewController" customModule="RichmondCatalog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cym-O1-m6X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,31 +24,40 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4dV-qV-mdE">
-                                            <rect key="frame" x="8" y="8" width="73" height="73"/>
+                                            <rect key="frame" x="8" y="8" width="94" height="73"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="94" id="Exh-qZ-05Z"/>
+                                                <constraint firstAttribute="height" constant="73" id="Pho-a8-jAZ"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsY-Ch-6bH">
-                                            <rect key="frame" x="106" y="34" width="163" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="110" y="34" width="214" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flechaCategoria" translatesAutoresizingMaskIntoConstraints="NO" id="xfL-k7-nWr">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flechaCat.png" translatesAutoresizingMaskIntoConstraints="NO" id="xfL-k7-nWr">
                                             <rect key="frame" x="332" y="27" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="Loi-IW-zI5"/>
+                                                <constraint firstAttribute="height" constant="35" id="YG8-uz-UL6"/>
+                                                <constraint firstAttribute="width" constant="35" id="vYU-Hc-0T1"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="xfL-k7-nWr" secondAttribute="trailing" id="78i-ea-efs"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="4dV-qV-mdE" secondAttribute="trailing" constant="286" id="8Bx-qf-yCb"/>
-                                        <constraint firstItem="xfL-k7-nWr" firstAttribute="leading" secondItem="GsY-Ch-6bH" secondAttribute="trailing" constant="63" id="Bte-CH-OUw"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="GsY-Ch-6bH" secondAttribute="bottom" constant="26" id="CcQ-uP-2Sj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GsY-Ch-6bH" secondAttribute="trailing" constant="43" id="DoC-i1-Mzv"/>
                                         <constraint firstAttribute="topMargin" secondItem="4dV-qV-mdE" secondAttribute="top" id="GPQ-C3-E6R"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="xfL-k7-nWr" secondAttribute="trailing" id="MrE-re-qiC"/>
                                         <constraint firstItem="xfL-k7-nWr" firstAttribute="top" secondItem="kBI-kw-ysg" secondAttribute="topMargin" constant="19" id="OV1-Sn-ZOU"/>
-                                        <constraint firstItem="GsY-Ch-6bH" firstAttribute="leading" secondItem="4dV-qV-mdE" secondAttribute="trailing" constant="25" id="bXQ-NY-AHQ"/>
+                                        <constraint firstItem="xfL-k7-nWr" firstAttribute="leading" secondItem="GsY-Ch-6bH" secondAttribute="trailing" constant="8" id="SFT-NJ-5mS"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4dV-qV-mdE" secondAttribute="trailing" constant="265" id="Zxh-IY-KoG"/>
                                         <constraint firstItem="GsY-Ch-6bH" firstAttribute="top" secondItem="kBI-kw-ysg" secondAttribute="topMargin" constant="26" id="dEf-7e-hml"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="xfL-k7-nWr" secondAttribute="bottom" constant="19" id="fiO-eD-ifd"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="4dV-qV-mdE" secondAttribute="leading" id="fio-vI-Sog"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="GsY-Ch-6bH" secondAttribute="trailing" constant="98" id="gxb-4g-J4n"/>
+                                        <constraint firstItem="GsY-Ch-6bH" firstAttribute="leading" secondItem="4dV-qV-mdE" secondAttribute="trailing" constant="8" id="jwS-MH-783"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="4dV-qV-mdE" secondAttribute="bottom" id="l6m-RF-ivI"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -57,6 +67,7 @@
                                     <outlet property="imgFlechaCategoria" destination="xfL-k7-nWr" id="CV8-oS-xrf"/>
                                     <outlet property="imgLogoCategoria" destination="4dV-qV-mdE" id="cuS-4f-6Ro"/>
                                     <outlet property="labelCategoria" destination="GsY-Ch-6bH" id="szB-MM-Y1k"/>
+                                    <segue destination="Dbp-qp-Vzt" kind="show" identifier="segeSeries" id="8xE-4e-Dyn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,11 +83,105 @@
             </objects>
             <point key="canvasLocation" x="919.5" y="374.5"/>
         </scene>
+        <!--RICHMOND-->
+        <scene sceneID="I9R-lI-yYc">
+            <objects>
+                <tableViewController storyboardIdentifier="seriesTableView" title="RICHMOND" id="Dbp-qp-Vzt" customClass="SeriesTableViewController" customModule="RichmondCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="alR-cN-5ce">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="seriesCell" rowHeight="70" id="Ddl-1I-3RW" customClass="SerieTableViewCell" customModule="RichmondCatalog" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ddl-1I-3RW" id="u2k-iZ-aB2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEI-JG-RB5">
+                                            <rect key="frame" x="83" y="8" width="241" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flechaCat.png" translatesAutoresizingMaskIntoConstraints="NO" id="luI-yc-qeZ">
+                                            <rect key="frame" x="332" y="17" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="6LC-uj-7g7"/>
+                                                <constraint firstAttribute="height" constant="35" id="OhC-cF-1mh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEK-1X-Umj">
+                                            <rect key="frame" x="83" y="31" width="241" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tAS-Ue-zfV">
+                                            <rect key="frame" x="8" y="8" width="67" height="53"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="tAS-Ue-zfV" secondAttribute="height" multiplier="67:53" id="9up-u3-cd0"/>
+                                                <constraint firstAttribute="height" constant="53" id="oge-GV-JjH"/>
+                                                <constraint firstAttribute="width" constant="67" id="tv4-YV-IrV"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="luI-yc-qeZ" firstAttribute="top" secondItem="u2k-iZ-aB2" secondAttribute="topMargin" constant="9" id="0Tg-FB-2Rm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="YEI-JG-RB5" secondAttribute="trailing" constant="43" id="2Xh-5K-P9B"/>
+                                        <constraint firstItem="luI-yc-qeZ" firstAttribute="leading" secondItem="wEK-1X-Umj" secondAttribute="trailing" constant="8" id="7Kl-Hq-LRD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wEK-1X-Umj" secondAttribute="trailing" constant="43" id="9nw-en-C5g"/>
+                                        <constraint firstItem="wEK-1X-Umj" firstAttribute="top" secondItem="u2k-iZ-aB2" secondAttribute="topMargin" constant="23" id="9ol-Fm-gCt"/>
+                                        <constraint firstItem="luI-yc-qeZ" firstAttribute="leading" secondItem="YEI-JG-RB5" secondAttribute="trailing" constant="8" id="FOZ-Gx-hzs"/>
+                                        <constraint firstItem="YEI-JG-RB5" firstAttribute="leading" secondItem="tAS-Ue-zfV" secondAttribute="trailing" constant="8" id="MQO-8M-DXv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="luI-yc-qeZ" secondAttribute="trailing" id="cWB-5P-CD9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tAS-Ue-zfV" secondAttribute="trailing" constant="292" id="cnJ-vp-bpb"/>
+                                        <constraint firstAttribute="topMargin" secondItem="YEI-JG-RB5" secondAttribute="top" id="hHl-DR-TFh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="luI-yc-qeZ" secondAttribute="bottom" constant="9" id="hyt-gO-cia"/>
+                                        <constraint firstAttribute="topMargin" secondItem="tAS-Ue-zfV" secondAttribute="top" id="pi7-ln-eVv"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="tAS-Ue-zfV" secondAttribute="leading" id="qcS-MB-uJI"/>
+                                        <constraint firstItem="wEK-1X-Umj" firstAttribute="leading" secondItem="tAS-Ue-zfV" secondAttribute="trailing" constant="8" id="sh7-pR-zSB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wEK-1X-Umj" secondAttribute="bottom" constant="9" id="wEQ-Ax-Adq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tAS-Ue-zfV" secondAttribute="bottom" constant="9" id="pEV-Re-dc4"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imgFlechaSerie" destination="luI-yc-qeZ" id="T0V-6I-rTb"/>
+                                    <outlet property="imgSerie" destination="tAS-Ue-zfV" id="yGY-aJ-DB6"/>
+                                    <outlet property="lblDesSerie" destination="wEK-1X-Umj" id="SDP-rG-66i"/>
+                                    <outlet property="lblSerieTitle" destination="YEI-JG-RB5" id="I63-Dx-BZH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dbp-qp-Vzt" id="fgU-y6-DDb"/>
+                            <outlet property="delegate" destination="Dbp-qp-Vzt" id="d2I-Hp-GtZ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="1dB-iV-Nn8"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="SERIES" id="v0c-12-ptK">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="GQO-Dd-Pcn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" width="11" id="3zO-sm-vHa">
+                            <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKR-DX-8bQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393.5" y="374.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jUu-J5-Yl3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1UU-AA-mwZ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dB8-LN-9e9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -93,6 +198,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="flechaCategoria" width="35" height="35"/>
+        <image name="flechaCat.png" width="174" height="213"/>
     </resources>
 </document>

@@ -1,44 +1,58 @@
 //
-//  CategoriasTableViewController.swift
+//  SeriesTableViewController.swift
 //  RichmondCatalog
 //
 //  Created by Yanku on 08/08/16.
 //  Copyright © 2016 Yanku. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import SwiftyJSON
 
-class CategoriasTableViewController: UITableViewController {
+class SeriesTableViewController: UITableViewController {
+    //MARK: - carga de valores para las series.
     
-    
-    //MARK: -valores iniciales para la categoria
-    
-    var categorias : [String] =  ["PRESCHOOL","PRIMARY","SECUNDARY","YOUNG ADULTS","SUPPLEMENTARY","EXAMS","DIGITAL","READERS"]
-    
-    var colors = [
-        UIColor(red: 0.8471, green: 0.5569, blue: 0,      alpha: 1.0),
-        UIColor(red: 0.2196, green: 0.6353, blue: 0.7412, alpha: 1.0) ,
-        UIColor(red: 0.5529, green: 0.3451, blue: 0.5922, alpha: 1.0),
-        UIColor(red: 0.4078, green: 0.6706, blue: 0.5843, alpha: 1.0),
-        UIColor(red: 0.8,    green: 0.4118, blue: 0.3804, alpha: 1.0),
-        UIColor(red: 0.9451, green: 0.8078, blue: 0,      alpha: 1.0),
-        UIColor(red: 0.8667, green: 0.8706, blue: 0.2627, alpha: 1.0),
-        UIColor(red: 0.4353, green: 0.5529, blue: 0.7412, alpha: 1.0)
-    ]
-    
+    // sege de la categoria
+    var viacategoria : Int!
+    //alias de una tuplapara guardar series
+    typealias tuplaSeries = (nombreSerie:String,descripcionSerie:String,imagenSerie:String)
+    // MARK: - funcion para obtener series
+    func obtenerSerie(idCategora: Int) -> [tuplaSeries]{
+        
+        let path: String = NSBundle.mainBundle().pathForResource("series", ofType: "json")as String!
+        let jsonData = NSData(contentsOfFile: path)!
+        let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        
+        var contenidoSerie : [tuplaSeries] = []
+        
+        if let items = readableJSON.array {
+            for item in items {
+                if let _ = item["name"].string where item["category_idCategory"].intValue == idCategora{
+                    
+                    let nombreSerie         :String     = item["name"].stringValue
+                    let descripcionSerie    :String     = item["description"].stringValue
+                    let imagenSerie         :String     = item["imagePathA"].stringValue
+                    
+                    contenidoSerie.append((nombreSerie:nombreSerie,descripcionSerie:descripcionSerie,imagenSerie:imagenSerie))
+                }
+            }
+        }
+        return contenidoSerie
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +64,8 @@ class CategoriasTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return categorias.count
+        let nombreSeries = obtenerSerie(viacategoria)
+        return nombreSeries.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,25 +73,18 @@ class CategoriasTableViewController: UITableViewController {
         return 1
     }
 
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("categoriaCell", forIndexPath: indexPath) as! CategoriasTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("seriesCell", forIndexPath: indexPath) as! SerieTableViewCell
         
-        cell.labelCategoria?.text        = categorias[indexPath.section]
-        cell.backgroundColor            = colors[indexPath.section]
-        //cell.imgFlechaCategoria.image   = UIImage(named: "feclaCategoria")
-
-        // Configure the cell...
-
+        let arraySerie = obtenerSerie(viacategoria)
+        
+        cell.lblSerieTitle.text     = arraySerie[indexPath.section].nombreSerie
+        cell.imgSerie.image         = UIImage(named: arraySerie[indexPath.section].imagenSerie)
+        cell.lblDesSerie.text       = arraySerie[indexPath.section].descripcionSerie
+        
         return cell
     }
-    /*
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        segeCategoria = categorias[indexPath.row]
-        print(" se selecciono \(segeCategoria)")
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -113,57 +121,14 @@ class CategoriasTableViewController: UITableViewController {
     }
     */
 
-
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        let path = self.tableView.indexPathForSelectedRow
-        var indiceCategoria : Int = 0
-        
-        switch categorias[(path?.section)!] {
-            
-        case "PRESCHOOL":
-            indiceCategoria = 1
-            break
-        case "PRIMARY":
-            indiceCategoria = 2
-            break
-        case "SECUNDARY":
-            indiceCategoria = 3
-            break
-        case "YOUNG ADULTS":
-            indiceCategoria = 4
-            break
-        case "SUPPLEMENTARY":
-            indiceCategoria = 5
-            break
-        case "EXAMS":
-            indiceCategoria = 6
-            break
-        case "DIGITAL":
-            indiceCategoria = 7
-            break
-        case "READERS":
-            indiceCategoria = 8
-            break
-        default:
-            indiceCategoria = 0
-            break
-        }
-        
-        print("inidice de la categoria: \(indiceCategoria)")
-        
-        if segue.identifier == "segeSeries" {
-            
-            if let destinationVC = segue.destinationViewController as? SeriesTableViewController {
-                destinationVC.viacategoria = indiceCategoria
-            }
-        }
     }
+    */
 
 }
