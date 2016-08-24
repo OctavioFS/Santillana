@@ -46,6 +46,10 @@ class SeriesTableViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        let logo = UIImage(named: "logoRichmondC")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -121,14 +125,20 @@ class SeriesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view controller.+
+        
+        if segue.identifier == "segueDetailSerie"{
+            if let destinationVC = segue.destinationViewController as? DetailUISegmentControl{
+                
+                destinationVC.viaSegueSerie = 1
+             }
+        }
     }
-    */
 
 }

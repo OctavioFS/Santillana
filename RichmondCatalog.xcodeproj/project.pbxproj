@@ -829,6 +829,10 @@
 		68DD9BE01D67B95200A433D6 /* yle_l.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD98B81D67B95200A433D6 /* yle_l.png */; };
 		68DD9BE11D67B95200A433D6 /* yle.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD98B91D67B95200A433D6 /* yle.png */; };
 		68DD9BE31D6B475C00A433D6 /* flechaCat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD9BE21D6B475C00A433D6 /* flechaCat.png */; };
+		68DD9BE91D6CB0B300A433D6 /* DetailUISegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DD9BE81D6CB0B300A433D6 /* DetailUISegmentControl.swift */; };
+		68DD9BEB1D6CFBB500A433D6 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD9BEA1D6CFBB500A433D6 /* hamburger.png */; };
+		68DD9BED1D6DE04000A433D6 /* logoRichmondC.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD9BEC1D6DE04000A433D6 /* logoRichmondC.png */; };
+		68DD9BEF1D6DE40900A433D6 /* flechaCatWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD9BEE1D6DE40900A433D6 /* flechaCatWhite.png */; };
 		BD6C8DF0659181B259D14926 /* Pods_RichmondCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33AB70EE51F2DAA635EFD7E /* Pods_RichmondCatalog.framework */; };
 /* End PBXBuildFile section */
 
@@ -1670,6 +1674,10 @@
 		68DD98B81D67B95200A433D6 /* yle_l.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yle_l.png; sourceTree = "<group>"; };
 		68DD98B91D67B95200A433D6 /* yle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yle.png; sourceTree = "<group>"; };
 		68DD9BE21D6B475C00A433D6 /* flechaCat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechaCat.png; sourceTree = "<group>"; };
+		68DD9BE81D6CB0B300A433D6 /* DetailUISegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailUISegmentControl.swift; sourceTree = "<group>"; };
+		68DD9BEA1D6CFBB500A433D6 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
+		68DD9BEC1D6DE04000A433D6 /* logoRichmondC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoRichmondC.png; sourceTree = "<group>"; };
+		68DD9BEE1D6DE40900A433D6 /* flechaCatWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechaCatWhite.png; sourceTree = "<group>"; };
 		7F5A549B47EC3DE4B850571D /* Pods-RichmondCatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichmondCatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichmondCatalog/Pods-RichmondCatalog.release.xcconfig"; sourceTree = "<group>"; };
 		D33AB70EE51F2DAA635EFD7E /* Pods_RichmondCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichmondCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1741,6 +1749,7 @@
 				68D46D9E1D59150900E54B46 /* AppDelegate.swift */,
 				68D46DA01D59150900E54B46 /* ViewController.swift */,
 				68D46DA21D59150900E54B46 /* Main.storyboard */,
+				68DD9BE81D6CB0B300A433D6 /* DetailUISegmentControl.swift */,
 				68D46DA51D59150900E54B46 /* Assets.xcassets */,
 				68D46DA71D59150900E54B46 /* LaunchScreen.storyboard */,
 				68D46DAA1D59150900E54B46 /* Info.plist */,
@@ -1778,6 +1787,9 @@
 		68DD958F1D67B82200A433D6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				68DD9BEE1D6DE40900A433D6 /* flechaCatWhite.png */,
+				68DD9BEC1D6DE04000A433D6 /* logoRichmondC.png */,
+				68DD9BEA1D6CFBB500A433D6 /* hamburger.png */,
 				68DD9BE21D6B475C00A433D6 /* flechaCat.png */,
 				68DD95921D67B94D00A433D6 /* abp.png */,
 				68DD95931D67B94D00A433D6 /* abracadabra_l.png */,
@@ -3334,6 +3346,7 @@
 				68DD9A8D1D67B95200A433D6 /* isbn_9786070606151.jpg in Resources */,
 				68DD9A1A1D67B95200A433D6 /* isbn_9780956857736.jpg in Resources */,
 				68DD98C81D67B95200A433D6 /* ambp_cd.jpg in Resources */,
+				68DD9BEB1D6CFBB500A433D6 /* hamburger.png in Resources */,
 				68DD9B641D67B95200A433D6 /* rpt_movers_sb.jpg in Resources */,
 				68DD9A3E1D67B95200A433D6 /* isbn_9781906861759.jpg in Resources */,
 				68DD9A291D67B95200A433D6 /* isbn_9781906861056.jpg in Resources */,
@@ -3409,6 +3422,7 @@
 				68DD99351D67B95200A433D6 /* d_awe_tb.jpg in Resources */,
 				68DD9A5E1D67B95200A433D6 /* isbn_9781909221383.jpg in Resources */,
 				68DD998E1D67B95200A433D6 /* D_S&G_RBOOK.png in Resources */,
+				68DD9BEF1D6DE40900A433D6 /* flechaCatWhite.png in Resources */,
 				68DD99C11D67B95200A433D6 /* dvd_readers.png in Resources */,
 				68DD98E91D67B95200A433D6 /* beep.png in Resources */,
 				68DD990D1D67B95200A433D6 /* crickets_language_flashcards.jpg in Resources */,
@@ -3496,6 +3510,7 @@
 				68DD9B051D67B95200A433D6 /* math_adv_pack.jpg in Resources */,
 				68DD98BF1D67B95200A433D6 /* abracadabra_student_book.jpg in Resources */,
 				68DD99791D67B95200A433D6 /* d_motion_dvd.jpg in Resources */,
+				68DD9BED1D6DE04000A433D6 /* logoRichmondC.png in Resources */,
 				68DD9A541D67B95200A433D6 /* isbn_9781909221239.jpg in Resources */,
 				68DD9BC41D67B95200A433D6 /* tippy_toes_students_book.jpg in Resources */,
 				68DD98BC1D67B95200A433D6 /* abracadabra_pack_1.jpg in Resources */,
@@ -3570,6 +3585,7 @@
 				68D46DC11D59171F00E54B46 /* CategoriasTableViewCell.swift in Sources */,
 				68D46DBF1D5916F500E54B46 /* CategoriasTableViewController.swift in Sources */,
 				68D46D9F1D59150900E54B46 /* AppDelegate.swift in Sources */,
+				68DD9BE91D6CB0B300A433D6 /* DetailUISegmentControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,12 +33,18 @@ class CategoriasTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    override func viewDidAppear(animated: Bool) {
+        
+        navigationController?.navigationBar.translucent = true
+        navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor()]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,13 +76,16 @@ class CategoriasTableViewController: UITableViewController {
 
         return cell
     }
-    /*
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        segeCategoria = categorias[indexPath.row]
-        print(" se selecciono \(segeCategoria)")
+        navigationController?.navigationBar.translucent = false
+        navigationController?.navigationBar.barTintColor = colors[indexPath.section]
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

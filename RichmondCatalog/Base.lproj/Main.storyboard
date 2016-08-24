@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Categories-->
+        <!--Categorias Table View Controller-->
         <scene sceneID="QhE-h5-lrl">
             <objects>
                 <tableViewController storyboardIdentifier="categoriesTabeView" id="mAq-c3-Etp" customClass="CategoriasTableViewController" customModule="RichmondCatalog" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flechaCat.png" translatesAutoresizingMaskIntoConstraints="NO" id="xfL-k7-nWr">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flechaCatWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="xfL-k7-nWr">
                                             <rect key="frame" x="332" y="27" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="Loi-IW-zI5"/>
@@ -76,7 +76,7 @@
                             <outlet property="delegate" destination="mAq-c3-Etp" id="qoA-Qt-WfR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" id="q18-vU-PYo"/>
+                    <navigationItem key="navigationItem" id="q18-vU-PYo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lvF-ba-CnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,6 +153,7 @@
                                     <outlet property="imgSerie" destination="tAS-Ue-zfV" id="yGY-aJ-DB6"/>
                                     <outlet property="lblDesSerie" destination="wEK-1X-Umj" id="SDP-rG-66i"/>
                                     <outlet property="lblSerieTitle" destination="YEI-JG-RB5" id="I63-Dx-BZH"/>
+                                    <segue destination="Vni-dc-aXp" kind="show" identifier="segueDetailSerie" id="T59-1H-SfQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -164,9 +165,13 @@
                     <tabBarItem key="tabBarItem" title="Item" id="1dB-iV-Nn8"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="SERIES" id="v0c-12-ptK">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="GQO-Dd-Pcn"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" width="11" id="3zO-sm-vHa">
+                        <barButtonItem key="backBarButtonItem" title="Series" id="GQO-Dd-Pcn"/>
+                        <barButtonItem key="rightBarButtonItem" image="hamburger.png" width="11" id="3zO-sm-vHa">
                             <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="1UU-AA-mwZ" kind="show" id="6xx-cd-U1i"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -174,7 +179,111 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKR-DX-8bQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1393.5" y="374.5"/>
+            <point key="canvasLocation" x="1340.5" y="374.5"/>
+        </scene>
+        <!--RICHMOND-->
+        <scene sceneID="uT4-RG-h3j">
+            <objects>
+                <viewController id="Vni-dc-aXp" customClass="DetailUISegmentControl" customModule="RichmondCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSj-cN-8cm"/>
+                        <viewControllerLayoutGuide type="bottom" id="b7T-EF-iDe"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="jW9-J5-wTZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Nq-JS-BzE">
+                                <rect key="frame" x="-8" y="64" width="391" height="29"/>
+                                <segments>
+                                    <segment title="Description"/>
+                                    <segment title="For Students"/>
+                                    <segment title="For Teachers"/>
+                                    <segment title="ISBNs"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="indexChanged:" destination="Vni-dc-aXp" eventType="valueChanged" id="t6w-Lf-zKR"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDZ-gG-frS">
+                                <rect key="frame" x="-4" y="108" width="383" height="507"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eP8-US-lje">
+                                        <rect key="frame" x="158" y="243" width="59" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uff-d7-4dc">
+                                <rect key="frame" x="-8" y="108" width="387" height="507"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMF-aA-LZ4">
+                                        <rect key="frame" x="168" y="243" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CRICKETS_NUR_STUDENTS_BOOK.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Yv-J0-SJ5">
+                                        <rect key="frame" x="73" y="45" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4Yv-J0-SJ5" firstAttribute="leading" secondItem="Uff-d7-4dc" secondAttribute="leading" constant="73" id="0w8-pC-nwK"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Yv-J0-SJ5" secondAttribute="trailing" constant="74" id="DOq-lz-TGV"/>
+                                    <constraint firstItem="4Yv-J0-SJ5" firstAttribute="top" secondItem="Uff-d7-4dc" secondAttribute="top" constant="45" id="HZn-SP-i01"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Yv-J0-SJ5" secondAttribute="bottom" constant="334" id="POi-YP-NC8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WMF-aA-LZ4" firstAttribute="leading" secondItem="jW9-J5-wTZ" secondAttribute="leadingMargin" constant="144" id="1JQ-59-g1V"/>
+                            <constraint firstItem="WMF-aA-LZ4" firstAttribute="top" secondItem="eSj-cN-8cm" secondAttribute="bottom" constant="287" id="4lN-5H-Eee"/>
+                            <constraint firstItem="Uff-d7-4dc" firstAttribute="top" secondItem="eSj-cN-8cm" secondAttribute="bottom" constant="44" id="6cx-Gh-BYS"/>
+                            <constraint firstItem="2Nq-JS-BzE" firstAttribute="top" secondItem="eSj-cN-8cm" secondAttribute="bottom" id="8Es-XF-wCY"/>
+                            <constraint firstItem="DDZ-gG-frS" firstAttribute="leading" secondItem="jW9-J5-wTZ" secondAttribute="leadingMargin" constant="-20" id="CaE-C6-le2"/>
+                            <constraint firstItem="b7T-EF-iDe" firstAttribute="top" secondItem="DDZ-gG-frS" secondAttribute="bottom" constant="8" id="EuC-rQ-bJQ"/>
+                            <constraint firstItem="eP8-US-lje" firstAttribute="leading" secondItem="jW9-J5-wTZ" secondAttribute="leadingMargin" constant="138" id="OVu-I4-t0I"/>
+                            <constraint firstItem="Uff-d7-4dc" firstAttribute="leading" secondItem="jW9-J5-wTZ" secondAttribute="leadingMargin" constant="-24" id="P3o-NU-YJn"/>
+                            <constraint firstItem="b7T-EF-iDe" firstAttribute="top" secondItem="eP8-US-lje" secondAttribute="bottom" constant="251" id="S27-r1-gTr"/>
+                            <constraint firstItem="eP8-US-lje" firstAttribute="top" secondItem="eSj-cN-8cm" secondAttribute="bottom" constant="287" id="TbD-Ef-FSr"/>
+                            <constraint firstItem="2Nq-JS-BzE" firstAttribute="leading" secondItem="jW9-J5-wTZ" secondAttribute="leadingMargin" constant="-24" id="Uhj-6f-j2J"/>
+                            <constraint firstItem="DDZ-gG-frS" firstAttribute="top" secondItem="eSj-cN-8cm" secondAttribute="bottom" constant="44" id="Vba-gL-g7h"/>
+                            <constraint firstItem="b7T-EF-iDe" firstAttribute="top" secondItem="Uff-d7-4dc" secondAttribute="bottom" constant="8" id="awv-An-SLU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WMF-aA-LZ4" secondAttribute="trailing" constant="149" id="drO-Yh-e8I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eP8-US-lje" secondAttribute="trailing" constant="146" id="ghC-gv-AO3"/>
+                            <constraint firstItem="b7T-EF-iDe" firstAttribute="top" secondItem="WMF-aA-LZ4" secondAttribute="bottom" constant="251" id="nuQ-qg-r2I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Nq-JS-BzE" secondAttribute="trailing" constant="-24" id="sLK-um-It8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uff-d7-4dc" secondAttribute="trailing" constant="-20" id="tDB-bX-4qi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DDZ-gG-frS" secondAttribute="trailing" constant="-20" id="vPp-gy-ktQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RICHMOND" id="cS3-Ls-dJn">
+                        <barButtonItem key="backBarButtonItem" title="SERIES" id="nxg-wv-9KC"/>
+                        <barButtonItem key="rightBarButtonItem" image="hamburger.png" id="CeI-9g-PdY">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="1UU-AA-mwZ" kind="show" id="g67-VZ-Ih4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="SegmentDetail" destination="2Nq-JS-BzE" id="wFv-uA-I9L"/>
+                        <outlet property="VistaDos" destination="Uff-d7-4dc" id="5eI-P9-apV"/>
+                        <outlet property="VistaUno" destination="DDZ-gG-frS" id="0OV-Ng-VYB"/>
+                        <outlet property="lblUuno" destination="eP8-US-lje" id="DuR-11-rle"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUW-Iy-Twa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771.5" y="374.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jUu-J5-Yl3">
@@ -194,10 +303,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kg0-iP-bbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="449" y="375"/>
+            <point key="canvasLocation" x="510.5" y="374.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CRICKETS_NUR_STUDENTS_BOOK.png" width="129" height="128"/>
         <image name="flechaCat.png" width="174" height="213"/>
+        <image name="flechaCatWhite.png" width="174" height="213"/>
+        <image name="hamburger.png" width="60" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="g67-VZ-Ih4"/>
+    </inferredMetricsTieBreakers>
 </document>
