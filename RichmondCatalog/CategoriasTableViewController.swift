@@ -8,22 +8,21 @@
 
 import UIKit
 
-class CategoriasTableViewController: UITableViewController {
-    
+class CategoriasTableViewController: UITableViewController {   
     
     //MARK: -valores iniciales para la categoria
     
-    var categorias : [String] =  ["PRESCHOOL","PRIMARY","SECUNDARY","YOUNG ADULTS","SUPPLEMENTARY","EXAMS","DIGITAL","READERS"]
+    var categorias : [String] =  ["PRESCHOOL","PRIMARY","SECONDARY","YOUNG ADULTS","SUPPLEMENTARY","EXAMS","DIGITAL","READERS"]
     
     var colors = [
-        UIColor(red: 0.8471, green: 0.5569, blue: 0,      alpha: 1.0),
-        UIColor(red: 0.2196, green: 0.6353, blue: 0.7412, alpha: 1.0) ,
-        UIColor(red: 0.5529, green: 0.3451, blue: 0.5922, alpha: 1.0),
-        UIColor(red: 0.4078, green: 0.6706, blue: 0.5843, alpha: 1.0),
-        UIColor(red: 0.8,    green: 0.4118, blue: 0.3804, alpha: 1.0),
-        UIColor(red: 0.9451, green: 0.8078, blue: 0,      alpha: 1.0),
-        UIColor(red: 0.8667, green: 0.8706, blue: 0.2627, alpha: 1.0),
-        UIColor(red: 0.4353, green: 0.5529, blue: 0.7412, alpha: 1.0)
+        UIColor(red:0.965,  green:0.585,  blue:0.116, alpha:1),
+        UIColor(red:0.090,  green:0.677,  blue:0.753, alpha:1),
+        UIColor(red:0.565,  green:0.255,  blue:0.580, alpha:1),
+        UIColor(red:0.097,  green:0.706,  blue:0.580, alpha:1),
+        UIColor(red:0.928,  green:0.331,  blue:0.345, alpha:1),
+        UIColor(red:0.893,  green:0.718,  blue:0.035, alpha:1),
+        UIColor(red:0.820,  green:0.885,  blue:0.208, alpha:1),
+        UIColor(red:0.274,  green:0.507,  blue:0.710, alpha:1)
     ]
     
     override func viewDidLoad() {
@@ -41,6 +40,7 @@ class CategoriasTableViewController: UITableViewController {
     }
     override func viewDidAppear(animated: Bool) {
         
+      
         navigationController?.navigationBar.translucent = true
         navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor()]
@@ -79,11 +79,12 @@ class CategoriasTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        
         navigationController?.navigationBar.translucent = false
         navigationController?.navigationBar.barTintColor = colors[indexPath.section]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
+    
     }
     
 
@@ -142,7 +143,7 @@ class CategoriasTableViewController: UITableViewController {
         case "PRIMARY":
             indiceCategoria = 2
             break
-        case "SECUNDARY":
+        case "SECONDARY":
             indiceCategoria = 3
             break
         case "YOUNG ADULTS":

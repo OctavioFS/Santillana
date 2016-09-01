@@ -833,6 +833,15 @@
 		68DD9BEB1D6CFBB500A433D6 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD9BEA1D6CFBB500A433D6 /* hamburger.png */; };
 		68DD9BED1D6DE04000A433D6 /* logoRichmondC.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD9BEC1D6DE04000A433D6 /* logoRichmondC.png */; };
 		68DD9BEF1D6DE40900A433D6 /* flechaCatWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD9BEE1D6DE40900A433D6 /* flechaCatWhite.png */; };
+		68DD9BF11D6E136300A433D6 /* lowRes1.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DD9BF01D6E136300A433D6 /* lowRes1.png */; };
+		68FB19E21D6E595100F4C553 /* cat1F.json in Resources */ = {isa = PBXBuildFile; fileRef = 68FB19DA1D6E595100F4C553 /* cat1F.json */; };
+		68FB19E31D6E595100F4C553 /* cat2F.json in Resources */ = {isa = PBXBuildFile; fileRef = 68FB19DB1D6E595100F4C553 /* cat2F.json */; };
+		68FB19E41D6E595100F4C553 /* cat3F.json in Resources */ = {isa = PBXBuildFile; fileRef = 68FB19DC1D6E595100F4C553 /* cat3F.json */; };
+		68FB19E51D6E595100F4C553 /* cat4F.json in Resources */ = {isa = PBXBuildFile; fileRef = 68FB19DD1D6E595100F4C553 /* cat4F.json */; };
+		68FB19E61D6E595100F4C553 /* cat5F.json in Resources */ = {isa = PBXBuildFile; fileRef = 68FB19DE1D6E595100F4C553 /* cat5F.json */; };
+		68FB19E71D6E595100F4C553 /* cat6F.json in Resources */ = {isa = PBXBuildFile; fileRef = 68FB19DF1D6E595100F4C553 /* cat6F.json */; };
+		68FB19E81D6E595100F4C553 /* cat7F.json in Resources */ = {isa = PBXBuildFile; fileRef = 68FB19E01D6E595100F4C553 /* cat7F.json */; };
+		68FB19E91D6E595100F4C553 /* cat8F.json in Resources */ = {isa = PBXBuildFile; fileRef = 68FB19E11D6E595100F4C553 /* cat8F.json */; };
 		BD6C8DF0659181B259D14926 /* Pods_RichmondCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33AB70EE51F2DAA635EFD7E /* Pods_RichmondCatalog.framework */; };
 /* End PBXBuildFile section */
 
@@ -1678,6 +1687,15 @@
 		68DD9BEA1D6CFBB500A433D6 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
 		68DD9BEC1D6DE04000A433D6 /* logoRichmondC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoRichmondC.png; sourceTree = "<group>"; };
 		68DD9BEE1D6DE40900A433D6 /* flechaCatWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechaCatWhite.png; sourceTree = "<group>"; };
+		68DD9BF01D6E136300A433D6 /* lowRes1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lowRes1.png; sourceTree = "<group>"; };
+		68FB19DA1D6E595100F4C553 /* cat1F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat1F.json; sourceTree = "<group>"; };
+		68FB19DB1D6E595100F4C553 /* cat2F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat2F.json; sourceTree = "<group>"; };
+		68FB19DC1D6E595100F4C553 /* cat3F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat3F.json; sourceTree = "<group>"; };
+		68FB19DD1D6E595100F4C553 /* cat4F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat4F.json; sourceTree = "<group>"; };
+		68FB19DE1D6E595100F4C553 /* cat5F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat5F.json; sourceTree = "<group>"; };
+		68FB19DF1D6E595100F4C553 /* cat6F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat6F.json; sourceTree = "<group>"; };
+		68FB19E01D6E595100F4C553 /* cat7F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat7F.json; sourceTree = "<group>"; };
+		68FB19E11D6E595100F4C553 /* cat8F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat8F.json; sourceTree = "<group>"; };
 		7F5A549B47EC3DE4B850571D /* Pods-RichmondCatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichmondCatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichmondCatalog/Pods-RichmondCatalog.release.xcconfig"; sourceTree = "<group>"; };
 		D33AB70EE51F2DAA635EFD7E /* Pods_RichmondCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichmondCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1714,6 +1732,14 @@
 		682B9C981D5A9F9100230D84 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				68FB19DA1D6E595100F4C553 /* cat1F.json */,
+				68FB19DB1D6E595100F4C553 /* cat2F.json */,
+				68FB19DC1D6E595100F4C553 /* cat3F.json */,
+				68FB19DD1D6E595100F4C553 /* cat4F.json */,
+				68FB19DE1D6E595100F4C553 /* cat5F.json */,
+				68FB19DF1D6E595100F4C553 /* cat6F.json */,
+				68FB19E01D6E595100F4C553 /* cat7F.json */,
+				68FB19E11D6E595100F4C553 /* cat8F.json */,
 				682B9C961D5A9F2B00230D84 /* series.json */,
 			);
 			name = JSON;
@@ -1746,10 +1772,10 @@
 				682B9C981D5A9F9100230D84 /* JSON */,
 				68D46DC21D59173200E54B46 /* Categoria */,
 				68D46DC51D59343400E54B46 /* series */,
+				68DD9BE81D6CB0B300A433D6 /* DetailUISegmentControl.swift */,
 				68D46D9E1D59150900E54B46 /* AppDelegate.swift */,
 				68D46DA01D59150900E54B46 /* ViewController.swift */,
 				68D46DA21D59150900E54B46 /* Main.storyboard */,
-				68DD9BE81D6CB0B300A433D6 /* DetailUISegmentControl.swift */,
 				68D46DA51D59150900E54B46 /* Assets.xcassets */,
 				68D46DA71D59150900E54B46 /* LaunchScreen.storyboard */,
 				68D46DAA1D59150900E54B46 /* Info.plist */,
@@ -1787,6 +1813,7 @@
 		68DD958F1D67B82200A433D6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				68DD9BF01D6E136300A433D6 /* lowRes1.png */,
 				68DD9BEE1D6DE40900A433D6 /* flechaCatWhite.png */,
 				68DD9BEC1D6DE04000A433D6 /* logoRichmondC.png */,
 				68DD9BEA1D6CFBB500A433D6 /* hamburger.png */,
@@ -2666,6 +2693,7 @@
 				TargetAttributes = {
 					68D46D9A1D59150900E54B46 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 46E48XULQ9;
 					};
 					68D46DAE1D59150900E54B46 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -2838,6 +2866,7 @@
 				68DD9B761D67B95200A433D6 /* site_pathway.jpg in Resources */,
 				68DD9B781D67B95200A433D6 /* site_thumbsup.jpg in Resources */,
 				68DD99DC1D67B95200A433D6 /* fun_way_l.png in Resources */,
+				68DD9BF11D6E136300A433D6 /* lowRes1.png in Resources */,
 				68DD998C1D67B95200A433D6 /* d_pebbles_puppet.jpg in Resources */,
 				682B9C971D5A9F2B00230D84 /* series.json in Resources */,
 				68DD9A2C1D67B95200A433D6 /* isbn_9781906861087.jpg in Resources */,
@@ -2899,6 +2928,7 @@
 				68DD99B31D67B95200A433D6 /* d_tippy_guide.jpg in Resources */,
 				68DD99431D67B95200A433D6 /* d_cool_guia.jpg in Resources */,
 				68DD9BD21D67B95200A433D6 /* toiec_cd_intermediate.jpg in Resources */,
+				68FB19E61D6E595100F4C553 /* cat5F.json in Resources */,
 				68DD9B691D67B95200A433D6 /* rvb_sb_w_ans.jpg in Resources */,
 				68DD99331D67B95200A433D6 /* d_awe_poster.jpg in Resources */,
 				68DD9AAA1D67B95200A433D6 /* isbn_9786070606472.jpg in Resources */,
@@ -2999,6 +3029,7 @@
 				68DD9B201D67B95200A433D6 /* mini_dictionary.png in Resources */,
 				68DD9BBA1D67B95200A433D6 /* thumbs_up_pack.jpg in Resources */,
 				68DD9B321D67B95200A433D6 /* outer_default.png in Resources */,
+				68FB19E91D6E595100F4C553 /* cat8F.json in Resources */,
 				68DD99401D67B95200A433D6 /* d_cool_cd.jpg in Resources */,
 				68DD9B6D1D67B95200A433D6 /* S&GEO_STUDENTS_BOOK.png in Resources */,
 				68DD9AB51D67B95200A433D6 /* isbn_9786070606588.jpg in Resources */,
@@ -3084,6 +3115,7 @@
 				68DD991D1D67B95200A433D6 /* cub_projectable.jpg in Resources */,
 				68DD99171D67B95200A433D6 /* CRICKETS_STUDENTS_CD.png in Resources */,
 				68DD9B591D67B95200A433D6 /* pt_science.png in Resources */,
+				68FB19E21D6E595100F4C553 /* cat1F.json in Resources */,
 				68DD9BE11D67B95200A433D6 /* yle.png in Resources */,
 				68DD9B111D67B95200A433D6 /* MFL&S_CD.png in Resources */,
 				68DD99591D67B95200A433D6 /* d_going_pro_dvd.jpg in Resources */,
@@ -3148,6 +3180,7 @@
 				68DD9A9C1D67B95200A433D6 /* isbn_9786070606328.jpg in Resources */,
 				68DD99311D67B95200A433D6 /* d_awe_cd.jpg in Resources */,
 				68DD99EC1D67B95200A433D6 /* gumdrops_pack_sbtn_cd.jpg in Resources */,
+				68FB19E71D6E595100F4C553 /* cat6F.json in Resources */,
 				68DD9BDE1D67B95200A433D6 /* work_l.png in Resources */,
 				68DD98DB1D67B95200A433D6 /* audio.png in Resources */,
 				68DD99531D67B95200A433D6 /* d_eng_id_tb.jpg in Resources */,
@@ -3221,6 +3254,7 @@
 				68DD9B9C1D67B95200A433D6 /* step_up_higher_students_book.jpg in Resources */,
 				68DD99361D67B95200A433D6 /* d_beep_cd.jpg in Resources */,
 				68DD9B131D67B95200A433D6 /* MFL&S_SB.png in Resources */,
+				68FB19E51D6E595100F4C553 /* cat4F.json in Resources */,
 				68DD9B171D67B95200A433D6 /* mfls_l.png in Resources */,
 				68DD9B1F1D67B95200A433D6 /* mini_dictionary_l.png in Resources */,
 				68DD992C1D67B95200A433D6 /* d_achiev_rbook.jpg in Resources */,
@@ -3440,6 +3474,7 @@
 				68DD9BCA1D67B95200A433D6 /* toeic_audioscriptanswe_advanced.jpg in Resources */,
 				68DD99751D67B95200A433D6 /* d_mathadv_rpack.jpg in Resources */,
 				68DD997F1D67B95200A433D6 /* d_next_poster.jpg in Resources */,
+				68FB19E81D6E595100F4C553 /* cat7F.json in Resources */,
 				68DD9A361D67B95200A433D6 /* isbn_9781906861551.jpg in Resources */,
 				68DD9AF91D67B95200A433D6 /* levels6.png in Resources */,
 				68DD9B251D67B95200A433D6 /* nafw_dvd.jpg in Resources */,
@@ -3475,6 +3510,7 @@
 				68DD9A971D67B95200A433D6 /* isbn_9786070606274.jpg in Resources */,
 				68DD9B7A1D67B95200A433D6 /* skyrocket_grammar_student_book.jpg in Resources */,
 				68DD9A7F1D67B95200A433D6 /* isbn_9786070606014.jpg in Resources */,
+				68FB19E41D6E595100F4C553 /* cat3F.json in Resources */,
 				68DD9A451D67B95200A433D6 /* isbn_9781908351142.jpg in Resources */,
 				68DD995B1D67B95200A433D6 /* d_going_pro_tg.jpg in Resources */,
 				68DD9B9B1D67B95200A433D6 /* step_up_higher_practice.jpg in Resources */,
@@ -3513,6 +3549,7 @@
 				68DD9BED1D6DE04000A433D6 /* logoRichmondC.png in Resources */,
 				68DD9A541D67B95200A433D6 /* isbn_9781909221239.jpg in Resources */,
 				68DD9BC41D67B95200A433D6 /* tippy_toes_students_book.jpg in Resources */,
+				68FB19E31D6E595100F4C553 /* cat2F.json in Resources */,
 				68DD98BC1D67B95200A433D6 /* abracadabra_pack_1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3717,10 +3754,14 @@
 			baseConfigurationReference = 31562599D3635D77990941D5 /* Pods-RichmondCatalog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RichmondCatalog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yanku.RichmondCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -3729,10 +3770,14 @@
 			baseConfigurationReference = 7F5A549B47EC3DE4B850571D /* Pods-RichmondCatalog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RichmondCatalog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yanku.RichmondCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

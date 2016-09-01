@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashSnatillana" translatesAutoresizingMaskIntoConstraints="NO" id="w3z-Dw-DMs">
-                                <rect key="frame" x="1" y="28" width="373" height="619"/>
+                                <rect key="frame" x="1" y="28" width="373" height="639"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="w3z-Dw-DMs" secondAttribute="bottom" id="554-OJ-t9C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w3z-Dw-DMs" secondAttribute="trailing" constant="-15" id="D2U-V3-DdU"/>
                             <constraint firstItem="w3z-Dw-DMs" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-15" id="FQj-60-gyW"/>
                             <constraint firstItem="w3z-Dw-DMs" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="NTY-xM-60Q"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="w3z-Dw-DMs" secondAttribute="bottom" constant="20" id="tqY-iy-05o"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
